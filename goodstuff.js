@@ -11,10 +11,13 @@ var compChoice = getComputerChoice();
 function convertComputerChoice(pick){
 
     if (pick === 1){
+        console.log('The computer picked Rock!'); 
         return 'rock';
     } else if (pick === 2){
+        console.log('The computer picked Paper!')
         return 'paper'
     } else if (pick ===3){
+        console.log('the computer picked Scissors!')
         return 'scissors'
     }
 }
@@ -48,8 +51,19 @@ validateChoice(playerChoice)
 
 function compareChoice(pick1, pick2){
 
-    if
-
-}
+    if(pick1 === 'rock' && pick2 === 'scissors'){
+        return('You win!');
+    } else if (pick1 === 'paper' && pick2 === 'rock'){
+        return('You win!');
+    } else if (pick1 === 'scissors' && pick2 === 'paper'){
+        return('You win!');
+    } else if (pick1 === pick2){
+        return("It's a tie!")
+    } else {
+        return('You loose!');
+    }
+};
 
 //print out the winner.
+
+console.log(compareChoice(playerChoice, compChoiceConverted));
